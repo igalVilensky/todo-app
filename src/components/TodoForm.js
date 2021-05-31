@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 function TodoForm(props) {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("asfasf");
 
   const handleChange = (e) => {
     setInput(e.target.value);
+    console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    /*   props.onSubmit({
+    props.onSubmit({
       id: uuidv4(),
       text: input,
-    }); */
+    });
 
     setInput("");
   };

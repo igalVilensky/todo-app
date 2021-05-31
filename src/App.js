@@ -1,4 +1,4 @@
-import TodoForm from "./components/TodoForm";
+/* import TodoForm from "./components/TodoForm"; */
 import TodoList from "./components/TodoList";
 import "./scss/main.scss";
 
