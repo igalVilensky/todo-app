@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-/* import { v4 as uuidv4 } from "uuid"; */
+import { v4 as uuidv4 } from "uuid";
 function TodoForm(props) {
   const [input, setInput] = useState("");
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    props.onSubmit({
-      id: Math.floor(Math.random() * 100),
+    /*   props.onSubmit({
+      id: uuidv4(),
       text: input,
-    });
+    }); */
+
     setInput("");
   };
   return (
@@ -20,6 +25,7 @@ function TodoForm(props) {
         value={input}
         name="text"
         className="todo-input"
+        onChange={handleChange}
       ></input>
       <button className="todo-button">Add</button>
     </form>
